@@ -80,55 +80,6 @@ nav {
   filter: blur(50px);
 }
 
-.side-buttons {
-  position: fixed;
-  top: 20%;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.side-btn {
-  width: auto;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.animated-button {
-  position: relative;
-  display: inline-block;
-  padding: 12px 24px;
-  border: none;
-  font-size: 16px;
-  background-color: inherit;
-  border-radius: 100px;
-  font-weight: 600;
-  color: white;
-  box-shadow: 0 0 0 2px #ffffff20;
-  cursor: pointer;
-  overflow: hidden;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.animated-button span {
-  position: relative;
-}
-
-.animated-button:hover {
-  box-shadow: 0 0 0 5px red;
-  color: #ffffff;
-}
-
-.animated-button:active {
-  scale: 0.95;
-}
-
-.animated-button:hover span:last-child {
-  width: 150px;
-  height: 150px;
-  opacity: 1;
-}
-
 .products {
   display: flex;
   flex-wrap: wrap;
