@@ -80,129 +80,133 @@ nav {
   filter: blur(50px);
 }
 
-.products {
+/* Existing styles... */
+
+/* Products grid */
+.products-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 100%;
+  padding-top: 70px;
 }
 
-.product {
-  border: 1px solid red;
-  padding: 20px;
-  width: 250px;
-  text-align: center;
-  background-color: #000;
+/* Individual product card */
+.product-card {
+  width: calc(
+    20% - 16px
+  ); /* For 5 products per line, with some space between */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  position: relative;
-  margin: 20px;
-  flex-basis: 18%;
-  box-sizing: border-box;
-  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.product img {
-  max-width: 100%;
-  border-radius: 5px;
-}
-
-.product-title {
-  font-size: 18px;
-  margin: 10px 0;
-  color: white;
-}
-
-.product-price {
-  font-size: 20px;
-  font-weight: bold;
-  color: #2196f3;
-  margin: 10px 0;
+.product-card img {
+  width: 100%;
+  height: auto;
 }
 
 .product-info {
+  padding: 10px;
+  background: #fff;
+}
+
+.product-actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.view-count {
-  display: flex;
-  align-items: center;
-  color: white;
-}
-
-.view-count img {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
+  margin-top: 10px;
 }
 
 .add-to-cart {
-  background-color: white;
-  color: black;
-  padding: 10px 15px;
+  background-color: #272727;
+  color: #fff;
   border: none;
+  padding: 8px 12px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s;
 }
 
 .add-to-cart:hover {
-  background-color: blue;
-  color: white;
+  background-color: #000;
 }
 
-.container {
-  position: relative;
-  --size-button: 40px;
-  color: white;
+.view-counter {
   display: flex;
   align-items: center;
+  font-size: 12px;
 }
 
-.input {
-  padding-left: var(--size-button);
-  height: var(--size-button);
-  font-size: 15px;
+.view-icon {
+  margin-right: 5px;
+}
+
+.like-button {
+  background: none;
   border: none;
-  color: #fff;
-  outline: none;
-  width: var(--size-button);
-  transition: all ease 0.3s;
-  background-color: #191a1e;
-  box-shadow: 1.5px 1.5px 3px #0e0e0e, -1.5px -1.5px 3px rgb(95 94 94 / 25%),
-    inset 0px 0px 0px #0e0e0e, inset 0px -0px 0px #5f5e5e;
-  border-radius: 50px;
+  color: #aaa;
+  font-size: 20px;
   cursor: pointer;
+  transition: color 0.2s;
 }
 
-.input:focus,
-.input:not(:invalid) {
-  width: 200px;
-  cursor: text;
-  box-shadow: 0px 0px 0px #0e0e0e, 0px 0px 0px rgb(95 94 94 / 25%),
-    inset 1.5px 1.5px 3px #0e0e0e, inset -1.5px -1.5px 3px #5f5e5e;
+.like-button:active {
+  color: red;
 }
 
-.input:focus + .icon,
-.input:not(:invalid) + .icon {
-  pointer-events: all;
-  cursor: pointer;
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  padding-top: 50px;
 }
 
-.container .icon {
-  width: var(--size-button);
-  height: var(--size-button);
-  padding: 8px;
-  pointer-events: all;
-}
-
-.container .icon svg {
+.mySlides {
+  display: none;
   width: 100%;
-  height: 100%;
 }
 
-.input:not(:focus) + .icon {
-  pointer-events: none;
+.mySlides img {
+  width: 50%; /* Control the width of the image. Example is 70% of the container. Adjust as needed. */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center the image horizontally */
+  display: block;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+#search-bar {
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid red;
+}
+
+#search-button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  border-radius: 0 5px 5px 0;
+  border: 1px solid red;
+  background-color: white;
+  color: black;
+  cursor: pointer;
 }

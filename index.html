@@ -18,119 +18,64 @@
       <a class="button" href="contactUs.html">Contact us</a>
     </nav>
 
-    <div class="container">
-      <input
-        type="text"
-        name="text"
-        class="input"
-        required=""
-        placeholder="Type to search..."
-      />
-      <div class="icon">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="ionicon"
-          viewBox="0 0 512 512"
-        >
-          <title>Search</title>
-          <path
-            d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"
-            fill="none"
-            stroke="currentColor"
-            stroke-miterlimit="10"
-            stroke-width="32"
-          ></path>
-          <path
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-miterlimit="10"
-            stroke-width="32"
-            d="M338.29 338.29L448 448"
-          ></path>
-        </svg>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+      <!-- Individual slides -->
+      <div class="mySlides fade">
+        <img src="images/games/reddead2.jpeg" />
       </div>
+
+      <div class="mySlides fade">
+        <img src="images/games/AssaCreed.jpeg" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/games/fortnite.jpeg" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/games/hitman.jpeg" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/games/gta5.jpeg" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/games/Minecraft.jpg" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/games/R6S.jpeg" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/games/WD2.jpeg" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/games/RDR1.jpeg" />
+      </div>
+      <!-- Repeat the above structure for each image -->
     </div>
 
-    <!--Products-->
-    <div class="products">
-      <div class="product">
-        <img src="images/games/reddead2.jpg" alt="Red Dead Redemption 2" />
-        <h3 class="product-title">Red Dead Redemption 2</h3>
-        <p class="product-price">$59.99</p>
-        <div class="product-info">
-          <span class="view-count"
-            ><img src="images/icons/view-icon.png" alt="View Icon" /> 1,234
-            views</span
-          >
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-      </div>
+    <script>
+      var slideIndex = 0;
 
-      <div class="product">
-        <img src="images/games/cod2.jpeg" alt="Black ops 2" />
-        <h3 class="product-title">Call of duty 2</h3>
-        <p class="product-price">$59.99</p>
-        <div class="product-info">
-          <span class="view-count"
-            ><img src="images/icons/view-icon.png" alt="View Icon" /> 1,234
-            views</span
-          >
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-      </div>
+      function showSlides() {
+        var slides = document.getElementsByClassName("mySlides");
+        for (var i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none"; // Hide all slides
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1; // If showing the last slide, return to the first one
+        }
+        slides[slideIndex - 1].style.display = "block"; // Display the current slide
+        setTimeout(showSlides, 2000); // Change slide every 2 seconds
+      }
 
-      <div class="product">
-        <img src="images/games/gta5.jpeg" alt="GTA 5" />
-        <h3 class="product-title">GTA 5</h3>
-        <p class="product-price">$59.99</p>
-        <div class="product-info">
-          <span class="view-count"
-            ><img src="images/icons/view-icon.png" alt="View Icon" /> 1,234
-            views</span
-          >
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-      </div>
-
-      <div class="product">
-        <img src="images/games/gta5.jpeg" alt="GTA 5" />
-        <h3 class="product-title">GTA 5</h3>
-        <p class="product-price">$59.99</p>
-        <div class="product-info">
-          <span class="view-count"
-            ><img src="images/icons/view-icon.png" alt="View Icon" /> 1,234
-            views</span
-          >
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-      </div>
-
-      <div class="product">
-        <img src="images/games/gta5.jpeg" alt="GTA 5" />
-        <h3 class="product-title">GTA 5</h3>
-        <p class="product-price">$59.99</p>
-        <div class="product-info">
-          <span class="view-count"
-            ><img src="images/icons/view-icon.png" alt="View Icon" /> 1,234
-            views</span
-          >
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-      </div>
-
-      <div class="product">
-        <img src="images/games/gta5.jpeg" alt="GTA 5" />
-        <h3 class="product-title">GTA 5</h3>
-        <p class="product-price">$59.99</p>
-        <div class="product-info">
-          <span class="view-count"
-            ><img src="images/icons/view-icon.png" alt="View Icon" /> 1,234
-            views</span
-          >
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-      </div>
-    </div>
+      showSlides();
+    </script>
   </body>
 </html>
