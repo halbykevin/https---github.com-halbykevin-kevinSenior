@@ -1,243 +1,257 @@
 body {
-    background-color: #000;
+  background-color: #000;
 }
 
 #logo {
-    text-align: center;
-    margin-top: 0;
-    padding-bottom: 20px;
+  text-align: center;
+  margin-top: 0;
+  padding-bottom: 20px;
 }
 
 nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button {
-    width: 140px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 0 15px;
-    background-color: red;
-    border-radius: 10px;
-    border: none;
-    color: white;
-    position: relative;
-    cursor: pointer;
-    font-weight: 900;
-    transition-duration: 0.2s;
-    background: linear-gradient(0deg, #000, #272727);
-    margin: 5px;
-    text-decoration: none;
+  width: 140px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 15px;
+  background-color: red;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  position: relative;
+  cursor: pointer;
+  font-weight: 900;
+  transition-duration: 0.2s;
+  background: linear-gradient(0deg, #000, #272727);
+  margin: 5px;
+  text-decoration: none;
 }
 
 .button:before,
 .button:after {
-    content: "";
-    position: absolute;
-    left: -2px;
-    top: -2px;
-    border-radius: 10px;
-    background: linear-gradient(45deg, #0000ff, #0000ff, #ff0000, #0000ff, #ff0000, #0000ff, #0000ff, #ff0000, #ff0000, #ff0000);
-    background-size: 400%;
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    z-index: -1;
-    animation: steam 20s linear infinite;
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  border-radius: 10px;
+  background: linear-gradient(
+    45deg,
+    #0000ff,
+    #0000ff,
+    #ff0000,
+    #0000ff,
+    #ff0000,
+    #0000ff,
+    #0000ff,
+    #ff0000,
+    #ff0000,
+    #ff0000
+  );
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
 }
 
 @keyframes steam {
-    0% {
-        background-position: 0 0;
-    }
+  0% {
+    background-position: 0 0;
+  }
 
-    50% {
-        background-position: 400% 0;
-    }
+  50% {
+    background-position: 400% 0;
+  }
 
-    100% {
-        background-position: 0 0;
-    }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 .button:after {
-    filter: blur(50px);
+  filter: blur(50px);
 }
 
 .side-buttons {
-    position: fixed;
-    top: 20%;
-    left: 0;
-    display: flex;
-    flex-direction: column;
+  position: fixed;
+  top: 20%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .side-btn {
-    width: auto;
-    text-align: center;
-    margin-bottom: 10px;
+  width: auto;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .animated-button {
-    position: relative;
-    display: inline-block;
-    padding: 12px 24px;
-    border: none;
-    font-size: 16px;
-    background-color: inherit;
-    border-radius: 100px;
-    font-weight: 600;
-    color: white;
-    box-shadow: 0 0 0 2px #ffffff20;
-    cursor: pointer;
-    overflow: hidden;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 0 0 2px #ffffff20;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .animated-button span {
-    position: relative;
+  position: relative;
 }
 
 .animated-button:hover {
-    box-shadow: 0 0 0 5px red;
-    color: #ffffff;
+  box-shadow: 0 0 0 5px red;
+  color: #ffffff;
 }
 
 .animated-button:active {
-    scale: 0.95;
+  scale: 0.95;
 }
 
 .animated-button:hover span:last-child {
-    width: 150px;
-    height: 150px;
-    opacity: 1;
+  width: 150px;
+  height: 150px;
+  opacity: 1;
 }
 
 .products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .product {
-    border: 1px solid red;
-    padding: 20px;
-    width: 250px;
-    text-align: center;
-    background-color: #000;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    position: relative;
-    margin: 20px;
-    flex-basis: 18%;
-    box-sizing: border-box;
-    padding: 10px;
+  border: 1px solid red;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  background-color: #000;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  position: relative;
+  margin: 20px;
+  flex-basis: 18%;
+  box-sizing: border-box;
+  padding: 10px;
 }
 
 .product img {
-    max-width: 100%;
-    border-radius: 5px;
+  max-width: 100%;
+  border-radius: 5px;
 }
 
 .product-title {
-    font-size: 18px;
-    margin: 10px 0;
-    color: white;
+  font-size: 18px;
+  margin: 10px 0;
+  color: white;
 }
 
 .product-price {
-    font-size: 20px;
-    font-weight: bold;
-    color: #2196F3;
-    margin: 10px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2196f3;
+  margin: 10px 0;
 }
 
 .product-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .view-count {
-    display: flex;
-    align-items: center;
-    color: white;
+  display: flex;
+  align-items: center;
+  color: white;
 }
 
 .view-count img {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
 }
 
 .add-to-cart {
-    background-color: white;
-    color: black;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: white;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .add-to-cart:hover {
-    background-color: blue;
-    color: white;
+  background-color: blue;
+  color: white;
 }
 
 .container {
-    position: relative;
-    --size-button: 40px;
-    color: white;
-    display: flex;
-    align-items: center;
+  position: relative;
+  --size-button: 40px;
+  color: white;
+  display: flex;
+  align-items: center;
 }
 
 .input {
-    padding-left: var(--size-button);
-    height: var(--size-button);
-    font-size: 15px;
-    border: none;
-    color: #fff;
-    outline: none;
-    width: var(--size-button);
-    transition: all ease 0.3s;
-    background-color: #191A1E;
-    box-shadow: 1.5px 1.5px 3px #0e0e0e, -1.5px -1.5px 3px rgb(95 94 94 / 25%), inset 0px 0px 0px #0e0e0e, inset 0px -0px 0px #5f5e5e;
-    border-radius: 50px;
-    cursor: pointer;
+  padding-left: var(--size-button);
+  height: var(--size-button);
+  font-size: 15px;
+  border: none;
+  color: #fff;
+  outline: none;
+  width: var(--size-button);
+  transition: all ease 0.3s;
+  background-color: #191a1e;
+  box-shadow: 1.5px 1.5px 3px #0e0e0e, -1.5px -1.5px 3px rgb(95 94 94 / 25%),
+    inset 0px 0px 0px #0e0e0e, inset 0px -0px 0px #5f5e5e;
+  border-radius: 50px;
+  cursor: pointer;
 }
 
 .input:focus,
 .input:not(:invalid) {
-    width: 200px;
-    cursor: text;
-    box-shadow: 0px 0px 0px #0e0e0e, 0px 0px 0px rgb(95 94 94 / 25%), inset 1.5px 1.5px 3px #0e0e0e, inset -1.5px -1.5px 3px #5f5e5e;
+  width: 200px;
+  cursor: text;
+  box-shadow: 0px 0px 0px #0e0e0e, 0px 0px 0px rgb(95 94 94 / 25%),
+    inset 1.5px 1.5px 3px #0e0e0e, inset -1.5px -1.5px 3px #5f5e5e;
 }
 
 .input:focus + .icon,
 .input:not(:invalid) + .icon {
-    pointer-events: all;
-    cursor: pointer;
+  pointer-events: all;
+  cursor: pointer;
 }
 
 .container .icon {
-    width: var(--size-button);
-    height: var(--size-button);
-    padding: 8px;
-    pointer-events: all;
+  width: var(--size-button);
+  height: var(--size-button);
+  padding: 8px;
+  pointer-events: all;
 }
 
 .container .icon svg {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .input:not(:focus) + .icon {
-    pointer-events: none;
+  pointer-events: none;
 }
