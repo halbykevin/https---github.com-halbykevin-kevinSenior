@@ -18,6 +18,29 @@
       <a class="button" href="contactUs.html">Contact us</a>
     </nav>
 
+    <div
+      aria-label="Orange and tan hamster running in a metal wheel"
+      role="img"
+      class="wheel-and-hamster"
+    >
+      <div class="wheel"></div>
+      <div class="hamster">
+        <div class="hamster__body">
+          <div class="hamster__head">
+            <div class="hamster__ear"></div>
+            <div class="hamster__eye"></div>
+            <div class="hamster__nose"></div>
+          </div>
+          <div class="hamster__limb hamster__limb--fr"></div>
+          <div class="hamster__limb hamster__limb--fl"></div>
+          <div class="hamster__limb hamster__limb--br"></div>
+          <div class="hamster__limb hamster__limb--bl"></div>
+          <div class="hamster__tail"></div>
+        </div>
+      </div>
+      <div class="spoke"></div>
+    </div>
+
     <!-- Contact Us Section -->
     <section id="contact">
       <h2>Contact Us</h2>
@@ -32,5 +55,11 @@
         <input type="submit" value="Submit" />
       </form>
     </section>
+    <script>
+      window.addEventListener("load", function () {
+        var loader = document.querySelector(".wheel-and-hamster");
+        loader.style.display = "none";
+      });
+    </script>
   </body>
 </html>
