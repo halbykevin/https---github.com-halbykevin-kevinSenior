@@ -318,8 +318,8 @@ nav {
 
 .svg-frame {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 1400px;
+  height: 800px;
   transform-style: preserve-3d;
   display: flex;
   justify-content: center;
