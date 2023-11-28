@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
     <link rel="stylesheet" href="style.css" />
     <title>Games Galaxy - Home</title>
   </head>
@@ -61,6 +66,7 @@
         <span class="fake-body"></span>
       </div>
     </div>
+    <!-- Shopping Cart Icon -->
 
     <div class="content" style="display: none">
       <div class="logo">
@@ -141,6 +147,56 @@
         window.addEventListener("load", function () {
           document.querySelector(".content").style.display = "block"; // Show the content
           document.querySelector(".svg-frame").style.display = "none"; // Hide the loader
+        });
+      </script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const toggleSwitch = document.getElementById("darkmode-toggle");
+          toggleSwitch.addEventListener("change", switchTheme, false);
+
+          function switchTheme(e) {
+            if (e.target.checked) {
+              // Apply dark theme
+              document.documentElement.style.setProperty(
+                "--primary-bg-color",
+                getComputedStyle(document.documentElement)
+                  .getPropertyValue("--primary-dark-bg-color")
+                  .trim()
+              );
+              document.documentElement.style.setProperty(
+                "--secondary-bg-color",
+                getComputedStyle(document.documentElement)
+                  .getPropertyValue("--secondary-dark-bg-color")
+                  .trim()
+              );
+              document.documentElement.style.setProperty(
+                "--text-color",
+                getComputedStyle(document.documentElement)
+                  .getPropertyValue("--dark-text-color")
+                  .trim()
+              );
+            } else {
+              // Apply light theme
+              document.documentElement.style.setProperty(
+                "--primary-bg-color",
+                getComputedStyle(document.documentElement)
+                  .getPropertyValue("--primary-light-bg-color")
+                  .trim()
+              );
+              document.documentElement.style.setProperty(
+                "--secondary-bg-color",
+                getComputedStyle(document.documentElement)
+                  .getPropertyValue("--secondary-light-bg-color")
+                  .trim()
+              );
+              document.documentElement.style.setProperty(
+                "--text-color",
+                getComputedStyle(document.documentElement)
+                  .getPropertyValue("--primary-text-color")
+                  .trim()
+              );
+            }
+          }
         });
       </script>
     </div>
