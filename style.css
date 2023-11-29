@@ -18,7 +18,7 @@ body {
     var(--primary-dark-bg-color),
     var(--secondary-dark-bg-color)
   );
-  color: var(--text-color);
+  color: var(--primary-text-color);
   transition: background-color 0.2s, color 0.2s;
 }
 
@@ -400,6 +400,13 @@ nav {
   }
 }
 
+.darkThemeBtn {
+  position: absolute;
+  top: 20px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
+  z-index: 999;
+  transition: all 0.3s;
+}
 .darkThemeBtn * {
   transition: all 0.3s;
 }
