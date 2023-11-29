@@ -77,16 +77,18 @@ document.addEventListener("DOMContentLoaded", function () {
       body.style.background = "linear-gradient(to right, #2a475e, #66c0f4)";
       body.style.color = "#000000";
 
+      // Assuming productInfos is an array of elements
       productInfos.forEach((info) => {
-        info.style.backgroundColor = "white";
+        info.style.background = "linear-gradient(to top, #c7d5e0, #ffffff)"; // Adjust as needed
         info.style.color = "black";
       });
     } else {
       body.style.background = "linear-gradient(to right, #171a21, #1b2838)";
       body.style.color = "#ffffff";
 
+      // Assuming productInfos is an array of elements
       productInfos.forEach((info) => {
-        info.style.backgroundColor = "black";
+        info.style.background = "linear-gradient(to top, #171a21, #1b2838)"; // Adjust as needed
         info.style.color = "white";
       });
     }
