@@ -126,11 +126,19 @@ nav {
   margin-bottom: 20px;
   border-radius: 8px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Push product info to the bottom */
+}
+
+.product-card .image-container {
+  padding: 20px; /* Adjust the padding as needed */
 }
 
 .product-card img {
-  width: 100%;
-  height: auto;
+  width: 100%; /* Stretch the image to fill its container */
+  height: 100%; /* Ensure the image fills the height */
+  object-fit: fill; /* Maintain aspect ratio and cover entire container */
 }
 
 .product-info {
