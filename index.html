@@ -151,49 +151,85 @@
       </script>
       <script>
         document.addEventListener("DOMContentLoaded", function () {
+          // Set dark theme colors as default on page load
+          document.documentElement.style.setProperty(
+            "--primary-bg-color",
+            "#171a21"
+          );
+          document.documentElement.style.setProperty(
+            "--secondary-bg-color",
+            "#1b2838"
+          );
+          document.documentElement.style.setProperty("--text-color", "#ffffff");
+
           const toggleSwitch = document.getElementById("darkmode-toggle");
           toggleSwitch.addEventListener("change", switchTheme, false);
 
           function switchTheme(e) {
             if (e.target.checked) {
-              // Apply dark theme
+              // Apply light theme when moon is showing
               document.documentElement.style.setProperty(
                 "--primary-bg-color",
-                getComputedStyle(document.documentElement)
-                  .getPropertyValue("--primary-dark-bg-color")
-                  .trim()
+                "#2a475e"
               );
-              document.documentElement.style.setProperty(
+              document.documentElement.style.setProperty(g
                 "--secondary-bg-color",
-                getComputedStyle(document.documentElement)
-                  .getPropertyValue("--secondary-dark-bg-color")
-                  .trim()
+                "#66c0f4"
               );
               document.documentElement.style.setProperty(
                 "--text-color",
-                getComputedStyle(document.documentElement)
-                  .getPropertyValue("--dark-text-color")
-                  .trim()
+                "#000000"
               );
             } else {
-              // Apply light theme
+              // Apply dark theme when sun is showing
               document.documentElement.style.setProperty(
                 "--primary-bg-color",
-                getComputedStyle(document.documentElement)
-                  .getPropertyValue("--primary-light-bg-color")
-                  .trim()
+                "#171a21"
               );
               document.documentElement.style.setProperty(
                 "--secondary-bg-color",
-                getComputedStyle(document.documentElement)
-                  .getPropertyValue("--secondary-light-bg-color")
-                  .trim()
+                "#1b2838"
               );
               document.documentElement.style.setProperty(
                 "--text-color",
-                getComputedStyle(document.documentElement)
-                  .getPropertyValue("--primary-text-color")
-                  .trim()
+                "#ffffff"
+              );
+            }
+          }
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+          const toggleSwitch = document.getElementById("darkmode-toggle");
+          toggleSwitch.addEventListener("change", switchTheme, false);
+
+          function switchTheme(e) {
+            if (e.target.checked) {
+              // Apply light theme when moon is showing
+              document.documentElement.style.setProperty(
+                "--primary-bg-color",
+                "#2a475e"
+              );
+              document.documentElement.style.setProperty(
+                "--secondary-bg-color",
+                "#66c0f4"
+              );
+              document.documentElement.style.setProperty(
+                "--text-color",
+                "#000000"
+              );
+            } else {
+              // Apply dark theme when sun is showing
+              document.documentElement.style.setProperty(
+                "--primary-bg-color",
+                "#171a21"
+              );
+              document.documentElement.style.setProperty(
+                "--secondary-bg-color",
+                "#1b2838"
+              );
+              document.documentElement.style.setProperty(
+                "--text-color",
+                "#ffffff"
               );
             }
           }
