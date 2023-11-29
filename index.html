@@ -200,39 +200,25 @@
 
         document.addEventListener("DOMContentLoaded", function () {
           const toggleSwitch = document.getElementById("darkmode-toggle");
+
           toggleSwitch.addEventListener("change", switchTheme, false);
 
           function switchTheme(e) {
+            const body = document.body;
             if (e.target.checked) {
-              // Apply light theme when moon is showing
-              document.documentElement.style.setProperty(
-                "--primary-bg-color",
-                "#2a475e"
-              );
-              document.documentElement.style.setProperty(
-                "--secondary-bg-color",
-                "#66c0f4"
-              );
-              document.documentElement.style.setProperty(
-                "--text-color",
-                "#000000"
-              );
+              body.style.background =
+                "linear-gradient(to right, #2a475e, #66c0f4)";
+              body.style.color = "#000000";
             } else {
-              // Apply dark theme when sun is showing
-              document.documentElement.style.setProperty(
-                "--primary-bg-color",
-                "#171a21"
-              );
-              document.documentElement.style.setProperty(
-                "--secondary-bg-color",
-                "#1b2838"
-              );
-              document.documentElement.style.setProperty(
-                "--text-color",
-                "#ffffff"
-              );
+              body.style.background =
+                "linear-gradient(to right, #171a21, #1b2838)";
+              body.style.color = "#ffffff";
             }
           }
+
+          // Initialize theme based on toggle's current state
+          const isDarkMode = toggleSwitch.checked;
+          switchTheme({ target: { checked: isDarkMode } });
         });
       </script>
     </div>

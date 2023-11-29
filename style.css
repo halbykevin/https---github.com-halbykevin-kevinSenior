@@ -13,8 +13,13 @@
 }
 
 body {
-  background-color: var(--primary-bg-color);
+  background: linear-gradient(
+    to right,
+    var(--primary-dark-bg-color),
+    var(--secondary-dark-bg-color)
+  );
   color: var(--text-color);
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .logo {
