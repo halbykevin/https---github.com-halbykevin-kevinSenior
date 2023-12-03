@@ -1,29 +1,36 @@
 document.addEventListener("DOMContentLoaded", function () {
   document
-    .getElementById("search-button")
-    .addEventListener("click", function () {
-      // Get the value of the search bar
-      var query = document.getElementById("search-bar").value.toLowerCase();
-
-      // Select all product cards
-      var productCards = document.querySelectorAll(".product-card");
-
-      // Iterate over each product card
-      productCards.forEach(function (card) {
-        // Get the product name from the h3 element
-        var productName = card.querySelector("h3").textContent.toLowerCase();
-
-        // Check if the product name includes the search query
-        if (productName.includes(query)) {
-          // If it does, display the product card
-          card.style.display = "block";
-        } else {
-          // Otherwise, hide the product card
-          card.style.display = "none";
-        }
-      });
+    .querySelector(".input__search")
+    .addEventListener("keyup", function (event) {
+      // Number 13 is the "Enter" key
+      if (event.keyCode === 13) {
+        // Trigger the search function
+        search();
+      }
     });
 });
+function search() {
+  // Get the value of the search bar
+  var query = document.querySelector(".input__search").value.toLowerCase();
+
+  // Select all product cards
+  var productCards = document.querySelectorAll(".product-card");
+
+  // Iterate over each product card
+  productCards.forEach(function (card) {
+    // Get the product name from the h3 element
+    var productName = card.querySelector("h3").textContent.toLowerCase();
+
+    // Check if the product name includes the search query
+    if (productName.includes(query)) {
+      // If it does, display the product card
+      card.style.display = "flex";
+    } else {
+      // Otherwise, hide the product card
+      card.style.display = "none";
+    }
+  });
+}
 
 // dark-light mode
 document.addEventListener("DOMContentLoaded", function () {
