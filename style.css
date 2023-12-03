@@ -23,7 +23,7 @@ body {
 
 /* Apply transition to body when theme-transition class is added */
 body.theme-transition {
-  transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* Breathing effect animation */
@@ -190,7 +190,7 @@ nav {
 }
 
 .product-info.theme-transition {
-  transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .view-counter {

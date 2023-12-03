@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
       productInfos.forEach((info) => {
         info.classList.remove("theme-transition");
       });
-    }, 1000);
+    }, 500);
   }
 
   // Initialize theme based on toggle's current state
