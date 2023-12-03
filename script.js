@@ -34,26 +34,37 @@ document.addEventListener("DOMContentLoaded", function () {
   function switchTheme(e) {
     const body = document.body;
     const productInfos = document.querySelectorAll(".product-info");
+    const isDarkMode = !e.target.checked;
 
-    if (e.target.checked) {
-      body.style.background = "linear-gradient(to right, #2a475e, #66c0f4)";
-      body.style.color = "#000000";
+    body.classList.add("theme-transition");
+    productInfos.forEach((info) => {
+      info.classList.add("theme-transition");
+    });
 
-      // Assuming productInfos is an array of elements
-      productInfos.forEach((info) => {
-        info.style.background = "linear-gradient(to top, #c7d5e0, #ffffff)"; // Adjust as needed
-        info.style.color = "black";
-      });
-    } else {
+    if (isDarkMode) {
       body.style.background = "linear-gradient(to right, #171a21, #1b2838)";
       body.style.color = "#ffffff";
-
-      // Assuming productInfos is an array of elements
       productInfos.forEach((info) => {
-        info.style.background = "linear-gradient(to top, #171a21, #1b2838)"; // Adjust as needed
+        info.style.background = "linear-gradient(to top, #171a21, #1b2838)";
         info.style.color = "white";
       });
+      // Apply dark theme here
+    } else {
+      body.style.background = "linear-gradient(to right, #2a475e, #66c0f4)";
+      body.style.color = "#000000";
+      productInfos.forEach((info) => {
+        info.style.background = "linear-gradient(to top, #c7d5e0, #ffffff)";
+        info.style.color = "black";
+      });
+      // Apply light theme here
     }
+
+    setTimeout(() => {
+      body.classList.remove("theme-transition");
+      productInfos.forEach((info) => {
+        info.classList.remove("theme-transition");
+      });
+    }, 1000);
   }
 
   // Initialize theme based on toggle's current state

@@ -21,6 +21,29 @@ body {
   color: var(--primary-text-color);
 }
 
+/* Apply transition to body when theme-transition class is added */
+body.theme-transition {
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* Breathing effect animation */
+@keyframes breathing {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+/* Apply the animation to body during theme transition */
+body.theme-transition {
+  animation: breathing 3s infinite;
+}
+
 .logo {
   text-align: center;
   margin-top: 0;
@@ -165,21 +188,11 @@ nav {
   align-items: center;
   margin-top: 10px;
 }
-/*
-.add-to-cart {
-  background-color: #272727;
-  color: #fff;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.2s;
+
+.product-info.theme-transition {
+  transition: background-color 0.5s, color 0.5s;
 }
 
-.add-to-cart:hover {
-  background-color: #000;
-}
-*/
 .view-counter {
   display: flex;
   align-items: center;
