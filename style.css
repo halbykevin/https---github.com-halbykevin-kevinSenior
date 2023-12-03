@@ -19,7 +19,6 @@ body {
     var(--secondary-dark-bg-color)
   );
   color: var(--primary-text-color);
-  transition: background-color 0.2s, color 0.2s;
 }
 
 .logo {
