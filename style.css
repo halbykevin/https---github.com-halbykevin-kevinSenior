@@ -565,6 +565,14 @@ nav {
   transition-duration: 0.5s;
 }
 
+.search-center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+  width: auto;
+}
+
 /* Search Bar */
 .input__container {
   position: relative;
@@ -580,7 +588,7 @@ nav {
   transform-style: preserve-3d;
   transform: rotateX(15deg) rotateY(-20deg);
   perspective: 500px;
-  margin-top: 10%;
+  width: 100%;
 }
 
 .shadow__input {
