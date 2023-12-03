@@ -19,6 +19,7 @@ body {
     var(--secondary-dark-bg-color)
   );
   color: var(--primary-text-color);
+  font-family: "Roboto", sans-serif;
 }
 
 /* Apply transition to body when theme-transition class is added */
