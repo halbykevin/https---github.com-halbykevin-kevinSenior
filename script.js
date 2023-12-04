@@ -91,3 +91,14 @@ document.addEventListener("DOMContentLoaded", function () {
 //     darkModeToggle.style.position = "absolute";
 //   }
 // });
+
+// Cart
+// let iconCart = document.querySelector(".iconCart");
+// let cart = document.querySelector(".cartTab");
+// let close = document.querySelector(".close");
+
+// iconCart.addEventListener("click", function () {
+//   if(cart.style.right == "-100%"){
+//     cart.style.right = "0";
+//     car
+//   }
