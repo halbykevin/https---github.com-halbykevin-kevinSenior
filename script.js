@@ -79,26 +79,24 @@ document.addEventListener("DOMContentLoaded", function () {
   switchTheme({ target: { checked: isDarkMode } });
 });
 
-// fix dark mode button while scrolling
-// window.addEventListener("scroll", function () {
-//   var darkModeToggle = document.querySelector(".darkThemeBtn");
-//   var scrollY = window.scrollY || window.pageYOffset;
-
-//   if (scrollY > 100) {
-//     // Adjust this value based on when you want the toggle to fix
-//     darkModeToggle.style.position = "fixed";
-//   } else {
-//     darkModeToggle.style.position = "absolute";
-//   }
-// });
-
 // Cart
-// let iconCart = document.querySelector(".iconCart");
-// let cart = document.querySelector(".cartTab");
-// let close = document.querySelector(".close");
+let cart = document.querySelector(".cartTab");
+cart.style.right = "-100%"; // Ensure the initial state is set off-screen
+let iconCart = document.querySelector(".iconCart");
+let container = document.querySelector(".container");
+let close = document.querySelector(".close");
 
-// iconCart.addEventListener("click", function () {
-//   if(cart.style.right == "-100%"){
-//     cart.style.right = "0";
-//     car
-//   }
+iconCart.addEventListener("click", () => {
+  if (cart.style.right == "-100%") {
+    cart.style.right = "-63%";
+    container.style.transform = "translateX(-400px)";
+  } else {
+    cart.style.right = "-100%";
+    container.style.transform = "translateX(0)";
+  }
+});
+
+close.addEventListener("click", () => {
+  cart.style.right = "-100%";
+  container.style.transform = "translateX(0)";
+});

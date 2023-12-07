@@ -193,6 +193,29 @@ nav {
   transition: background-color 0.3s, color 0.3s;
 }
 
+.info-price {
+  position: absolute;
+  right: 5%;
+  top: 83%;
+  font-size: 18px;
+  font-weight: bold;
+  color: #f39c12;
+  animation: pulse 2s infinite;
+  /* opacity: 0.8; */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .view-counter {
   display: flex;
   align-items: center;
@@ -355,14 +378,22 @@ nav {
 
 .auth-button {
   position: absolute;
-  top: 30px;
-  right: 20px;
   background-color: #272727;
   color: white;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
+}
+
+#loginButton {
+  top: 30px;
+  right: 130px;
+}
+
+#signupButton {
+  top: 30px; /* Adjust the distance for the second button */
+  right: 20px;
 }
 
 .auth-button:hover {
@@ -648,6 +679,7 @@ nav {
   margin: auto;
   max-width: 90%;
   transition: transform 1s;
+  transform: translate(0);
 }
 
 #cartIcon {
@@ -658,6 +690,7 @@ nav {
   float: right;
   position: relative;
   z-index: 1;
+  cursor: pointer;
 }
 
 .totalQuantity {
@@ -683,13 +716,14 @@ nav {
   top: 0;
   right: -100%;
   width: 400px;
-  height: 100vh;
+  height: 100%;
   background-color: rgb(42, 17, 77);
   display: grid;
   grid-template-rows: 50px 1fr 50px;
   gap: 20px;
   transition: right 1s;
   z-index: 999;
+  border-radius: 20px 0 0 20px;
 }
 
 .cartTab h2 {
@@ -715,12 +749,6 @@ nav {
 
 .cartTab .listCart .item .name {
   font-weight: bold;
-}
-
-.cartTab .listCart .item .quantity {
-  display: flex;
-  justify-content: end;
-  align-items: center;
 }
 
 .cartTab .listCart .item span {
