@@ -100,3 +100,17 @@ close.addEventListener("click", () => {
   cart.style.right = "-100%";
   container.style.transform = "translateX(0)";
 });
+
+function setRating(star) {
+  const rating = star.dataset.value;
+  const stars = document.querySelectorAll(".star");
+  stars.forEach((s) => {
+    s.style.color = s.dataset.value <= rating ? "gold" : "#ccc";
+  });
+}
+
+function submitComment() {
+  const comment = document.getElementById("comment").value;
+  // Add your code to handle the comment submission, like sending to a server
+  alert("Comment submitted: " + comment);
+}

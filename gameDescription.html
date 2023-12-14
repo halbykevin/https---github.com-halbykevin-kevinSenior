@@ -67,9 +67,39 @@
         <div class="logo">
           <img src="images/logo/Games-galaxy-Logo-transformed.png" />
         </div>
+
+        <nav>
+        <a class="button" href="index.html">Home</a>
+        <a class="button" href="shop.html">Shop</a>
+        <a class="button" href="whishList.html">Whish List</a>
+        <a class="button" href="aboutUs.html">About us</a>
+        <a class="button" href="contactUs.html">Contact us</a>
+      </nav>
         
         <div class="game-description">
-            
+            <iframe width="40%" height="40%" 
+            src="https://www.youtube.com/embed/-o7rES_3ymA" 
+            title="Red Dead Redemption Official Launch Trailer" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+          </iframe>
+
+          <h2>RED DEAD 1</h2>
+
+<!-- Star Rating -->
+<div class="star-rating">
+    <span class="star" onclick="setRating(this)" data-value="5">&#9733;</span>
+    <span class="star" onclick="setRating(this)" data-value="4">&#9733;</span>
+    <span class="star" onclick="setRating(this)" data-value="3">&#9733;</span>
+    <span class="star" onclick="setRating(this)" data-value="2">&#9733;</span>
+    <span class="star" onclick="setRating(this)" data-value="1">&#9733;</span>
+</div>
+
+<!-- Comment Section -->
+<div class="comment-section">
+    <textarea id="comment" placeholder="Leave a comment..."></textarea>
+    <button type="button" onclick="submitComment()">Submit</button>
+</div>
         </div>
         </div>
         <script src="script.js"></script>
